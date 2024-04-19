@@ -1,0 +1,39 @@
+---
+import Section from './Section.astro'
+---
+
+<Section className="difficulty" id="difficulty">
+    <div class="difficulty-container">
+        <div>
+            <button class="generate-new-colors-btn" id="generate_new_colors-btn">Generate New Colors</button>
+        </div>
+        <div>
+            <button class="difficulty-btn easy-difficulty-btn" id="easy_difficulty_btn">Easy</button>
+            <button class="difficulty-btn hard-difficulty-btn" id="hard_difficulty_btn">Hard</button>
+        </div>
+    </div>
+</Section>
+
+<style>
+   .difficulty-container
+   {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        height: 50px;
+        background-color: #999;
+   }
+
+   .difficulty-container div > button
+   {
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        text-transform: uppercase;
+   }
+
+   .difficulty-container div:last-child > button:first-child
+   {
+        margin-right: 20px;
+   }
+</style>
