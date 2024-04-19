@@ -1,0 +1,33 @@
+---
+const {generateColorsButtonText} = Astro.props
+---
+
+<button class="generate-new-colors-btn" id="generate_new_colors-btn">
+    {generateColorsButtonText}
+</button>
+
+<style>
+    .generate-new-colors-btn
+    {
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        padding: 5px;
+        border-radius: calc(var(--base-border-radius) / 2);
+        transition: box-shadow .2s ease-in, background .2s ease-in, color .2s ease-in;
+    }
+
+    .generate-new-colors-btn:hover
+    {
+        background-color: #4545af;
+        color: #fff;
+        box-shadow: var(--box-shadow);
+        transition: box-shadow .2s ease-in, background .2s ease-in, color .2s ease-in;
+    }
+
+    .generate-new-colors-btn:active
+    {
+        transform: scale(.98);
+        box-shadow: none;
+        transition: none;
+    }
+</style>

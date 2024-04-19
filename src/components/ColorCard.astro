@@ -1,0 +1,55 @@
+---
+---
+
+<div class="color-card" id="color_card">
+
+</div>
+
+<style>
+    .color-card
+    {
+        height: 200px;
+        width: 200px;
+        border-radius: calc(var(--base-border-radius));
+        box-shadow: var(--box-shadow);
+        cursor: pointer;
+        transition: opacity .15s ease-in;
+    }
+
+    .color-card:hover
+    {
+        opacity: .85;
+        transition: opacity .15s ease-in;
+    }
+</style>
+
+<script>
+    const colorCard = document.querySelector('#color_card') as HTMLElement
+
+    function generateRandomRGBColorValue()
+    {
+        // Setting each value to be a random number between 0 and 255
+        const r = Math.floor(Math.random() * 255)
+        const g = Math.floor(Math.random() * 255)
+        const b = Math.floor(Math.random() * 255)
+
+        // Updating the background color and RGB title color
+        updateColorValueAndTitleBackground({ r, g, b })
+
+        // Returning the values as a destructured object
+        return { r, g, b }
+    }
+
+    // Setting the {rgb} destructured object to be the result of the generateRandomRGBColorValue function
+    const { r, g, b } = generateRandomRGBColorValue()
+    updateColorValueAndTitleBackground({ r, g, b })
+    
+    // Passing in the destructured object as a parameter, so that each value can be accessed inside the function
+    function updateColorValueAndTitleBackground({ r, g, b })
+    {
+        colorCard.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
+        console.log(colorCard.style.backgroundColor)
+    }
+
+    
+</script>

@@ -68,13 +68,12 @@ import Section from "./Section.astro"
         updateColorValueAndTitleBackground({ r, g, b })
 
         // Returning the values as a destructured object
-        console.log({r, g, b})
         return { r, g, b }
     }
 
     // Setting the {rgb} destructured object to be the result of the generateRandomRGBColorValue function
     const { r, g, b } = generateRandomRGBColorValue()
-
+    updateColorValueAndTitleBackground({ r, g, b })
     
     // Passing in the destructured object as a parameter, so that each value can be accessed inside the function
     function updateColorValueAndTitleBackground({ r, g, b })
