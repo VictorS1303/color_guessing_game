@@ -5,7 +5,7 @@ import ColorCard from './ColorCard.astro'
 
 <Section className="color-card-area" id="color_card_area">
     <div class="color-card-area-container" id="color_card_area_container">
-       <ColorCard />
+        
     </div>
 </Section>
 
@@ -13,6 +13,10 @@ import ColorCard from './ColorCard.astro'
 <style>
     .color-card-area-container
     {
+        display: flex;
+        justify-content: center;
+        padding-top: 100px;
+        gap: 50px;
         height: 100vh;
         width: 100%;
     }
