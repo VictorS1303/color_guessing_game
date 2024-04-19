@@ -1,7 +1,17 @@
 ---
-const {className, id} = Astro.props
+const { className, id } = Astro.props;
 ---
 
 <section class={className} id={id}>
-    <slot />
+    <div class="container section-container">
+        <slot />
+    </div>
 </section>
+
+
+<style>
+    .container.section-container
+    {
+        text-align: center;
+    }
+</style>
