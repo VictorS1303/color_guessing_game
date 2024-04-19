@@ -20,7 +20,7 @@ import ColorCard from './ColorCard.astro'
 </style>
 
 <script>
-    export const colorCardAreaContainer = document.querySelector('#color_card_area_container') as HTMLElement
+    const colorCardAreaContainer = document.querySelector('#color_card_area_container') as HTMLElement
 
     window.addEventListener('load', updateCardAreaBackgroundColor)
 
