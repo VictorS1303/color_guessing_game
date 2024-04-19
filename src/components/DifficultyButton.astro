@@ -35,12 +35,11 @@ const buttons = difficulties.map((difficulty, index) => ({
 
     .difficulty-buttons-container .difficulty-btn:hover
     {
-        background-color: #191970;
+        background-color: #4545af;
         color: #fff;
         box-shadow: var(--box-shadow);
         transition: box-shadow .2s ease-in, background .2s ease-in, color .2s ease-in;
     }
-
 
     .difficulty-buttons-container .difficulty-btn:active
     {
@@ -48,4 +47,35 @@ const buttons = difficulties.map((difficulty, index) => ({
         box-shadow: none;
         transition: none;
     }
+
+    .active
+    {
+        color: #fff;
+        background-color: #191970;
+    }
+
+    .difficulty-buttons-container .difficulty-btn.active:hover
+    {
+        pointer-events: none;
+    }
 </style>
+
+<script>
+    const difficultyButtonsContainer = document.querySelector('.difficulty-buttons-container')
+    const difficultyButtons = document.querySelectorAll('.difficulty-btn')
+    
+    difficultyButtonsContainer.addEventListener('click', (e) => selectDifficulty(e))
+
+    // FUNCTIONS //
+
+    // Select Difficulty
+    function selectDifficulty(e: any)
+    {
+        if(e.target.matches('.difficulty-btn'))
+        {
+            difficultyButtons.forEach((difficultyButton) => difficultyButton.classList.remove('active'))
+            e.target.classList.add('active')
+        }
+    }
+
+</script>
