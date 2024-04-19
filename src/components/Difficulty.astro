@@ -1,5 +1,6 @@
 ---
 import Section from './Section.astro'
+import DifficultyButton from './DifficultyButton.astro'
 ---
 
 <Section className="difficulty" id="difficulty">
@@ -8,8 +9,9 @@ import Section from './Section.astro'
             <button class="generate-new-colors-btn" id="generate_new_colors-btn">Generate New Colors</button>
         </div>
         <div>
-            <button class="difficulty-btn easy-difficulty-btn" id="easy_difficulty_btn">Easy</button>
-            <button class="difficulty-btn hard-difficulty-btn" id="hard_difficulty_btn">Hard</button>
+            <DifficultyButton />
+            <!-- <button class="difficulty-btn easy-difficulty-btn" id="easy_difficulty_btn">Easy</button>
+            <button class="difficulty-btn hard-difficulty-btn" id="hard_difficulty_btn">Hard</button> -->
         </div>
     </div>
 </Section>

@@ -1,0 +1,51 @@
+---
+const difficulties = ['easy', 'hard']
+
+const buttons = difficulties.map((difficulty, index) => ({
+   difficulty: difficulties[index]
+}))
+---
+
+<div class="container difficulty-buttons-container">
+    {
+        buttons.map((button) => {
+            return (
+                <button class={`difficulty-btn ${button.difficulty}-difficulty-btn`} id={`${button.difficulty}_difficulty_btn`}>
+                    {button.difficulty.toUpperCase()}
+                </button>
+            );
+        })
+    }
+</div>
+
+<style>
+    .difficulty-buttons-container {
+        display: flex;
+        gap: 40px;
+    }
+
+    .difficulty-buttons-container .difficulty-btn
+    {
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        padding: 5px;
+        border-radius: calc(var(--base-border-radius) / 2);
+        transition: box-shadow .2s ease-in, background .2s ease-in, color .2s ease-in;
+    }
+
+    .difficulty-buttons-container .difficulty-btn:hover
+    {
+        background-color: #191970;
+        color: #fff;
+        box-shadow: var(--box-shadow);
+        transition: box-shadow .2s ease-in, background .2s ease-in, color .2s ease-in;
+    }
+
+
+    .difficulty-buttons-container .difficulty-btn:active
+    {
+        transform: scale(.98);
+        box-shadow: none;
+        transition: none;
+    }
+</style>
