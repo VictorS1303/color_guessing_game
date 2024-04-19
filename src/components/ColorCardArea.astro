@@ -1,0 +1,39 @@
+---
+import Section from './Section.astro'
+---
+
+<Section className="color-card-area" id="color_card_area">
+    <div class="color-card-area-container" id="color_card_area_container">
+        Hey
+    </div>
+</Section>
+
+
+<style>
+    .color-card-area-container
+    {
+        height: 100vh;
+        width: 100%;
+    }
+</style>
+
+<script>
+    const colorCardAreaContainer = document.querySelector('#color_card_area_container') as HTMLElement
+
+    window.addEventListener('load', updateCardAreaBackgroundColor)
+
+
+    // Generate Random Card Area Background Color
+    function generateRandomCardAreaBackgroundColor()
+    {
+        const randomColors = ['ffffff', '191970', '111111', 'fefea3', 'dafe23']
+        const generatedColor = randomColors[Math.floor(Math.random() * randomColors.length)]
+        return generatedColor
+    }
+
+    // Update Card Area Background Color
+    function updateCardAreaBackgroundColor()
+    {
+        colorCardAreaContainer.style.backgroundColor = `#${generateRandomCardAreaBackgroundColor()}` 
+    }
+</script>
