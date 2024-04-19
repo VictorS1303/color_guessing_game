@@ -1,0 +1,21 @@
+---
+import ColorCard from './ColorCard.astro'
+---
+
+<div class="color-card-area-container" id="color_card_area_container">
+    <ColorCard/>
+    <ColorCard/>
+</div>
+
+<style>
+    .color-card-area-container
+    {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: center;
+        padding-top: 100px;
+        padding-left: 300px;
+        height: 70vh;
+        width: 100vw;
+    }
+</style>
