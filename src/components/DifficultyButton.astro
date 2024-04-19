@@ -10,7 +10,7 @@ const buttons = difficulties.map((difficulty, index) => ({
     {
         buttons.map((button) => {
             return (
-                <button class={`difficulty-btn ${button.difficulty}-difficulty-btn`} id={`${button.difficulty}_difficulty_btn`}>
+                <button class={`difficulty-btn ${button.difficulty}-difficulty-btn`} id={`${button.difficulty}_difficulty_btn`} data-difficulty={`${button.difficulty}`}>
                     {button.difficulty.toUpperCase()}
                 </button>
             );
